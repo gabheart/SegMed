@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "821429313070",
+    "project_id": "projeto-senai-e9329",
+    "storage_bucket": "projeto-senai-e9329.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821429313070:android:3913aa22943295126c09bf",
+        "android_client_info": {
+          "package_name": "com.example.segsaude"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABmL8rfybxUEeBfUWqlmJSa8rZF3hksQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

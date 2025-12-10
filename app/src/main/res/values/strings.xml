@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SegSaude</string>
+    <string name="entrar">Entrar</string>
+    <string name="texto_cadastro">Não tem conta? Cadastre-se aqui</string>
+</resources>

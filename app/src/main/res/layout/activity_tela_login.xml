@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_seg_saude"
+        tools:context=".TelaLogin">
+
+        <!-- Logo SEGSAUDE -->
+        <ImageView
+            android:id="@+id/logo_segsaude"
+            android:layout_width="345dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logosegsaude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Container para email e senha (fundo "cartão") -->
+        <View
+            android:id="@+id/containerComponentes"
+            style="@style/ContainerComponentes"
+            android:layout_marginTop="120dp"
+            android:alpha="0.6"
+            app:layout_constraintTop_toBottomOf="@id/logo_segsaude"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Campo email -->
+        <EditText
+            android:id="@+id/edit_email"
+            style="@style/Edit_Text"
+            android:hint="Email"
+            android:alpha="0.8"
+            android:drawableRight="@drawable/ic_email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes" />
+
+        <!-- Campo senha -->
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_Text"
+            android:hint="Senha"
+            android:alpha="0.8"
+            android:drawableRight="@drawable/ic_olhos"
+            android:inputType="numberPassword"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/edit_email" />
+
+        <!-- Botão de entrar -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_entrar"
+            style="@style/Botao"
+            android:alpha="0.9"
+            android:text="@string/entrar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_senha" />
+
+        <!-- Barra de carregar -->
+        <ProgressBar
+            android:id="@+id/barra_progresso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/verde"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_entrar" />
+
+        <!-- Texto que leva pra tela de cadastro -->
+        <TextView
+            android:id="@+id/texto_tela_de_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_cadastro"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="72dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

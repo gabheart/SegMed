@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_seg_saude">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:background="#80000000"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Planos de Saúde - ADM"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- BOTÃO SAIR -->
+    <Button
+        android:id="@+id/bt_deslogar"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:text="Sair"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CARD PRINCIPAL BRANCO -->
+    <LinearLayout
+        android:id="@+id/containerPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_margin="16dp"
+        android:padding="20dp"
+        android:elevation="6dp"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toBottomOf="@id/bt_deslogar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personalizar Plano"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- CAMPOS -->
+        <Spinner
+            android:id="@+id/spinnerIdade"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#E5E5EA"/>
+
+        <Spinner
+            android:id="@+id/spinnerOperadora"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#E5E5EA"
+            android:paddingStart="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerPlano"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#E5E5EA"/>
+
+        <Spinner
+            android:id="@+id/spinnerAcomodacao"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#E5E5EA"/>
+
+        <EditText
+            android:id="@+id/edit_valor_plano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Valor do plano (R$)"
+            android:inputType="numberDecimal" />
+
+        <CheckBox
+            android:id="@+id/checkCopart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Com coparticipação"
+            android:layout_marginTop="14dp"/>
+
+        <Button
+            android:id="@+id/btnAplicarPlano"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Aplicar Plano"
+            android:backgroundTint="@color/azul_3"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plano Selecionado"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:id="@+id/containerTabelaItens"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
