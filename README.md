@@ -1,4 +1,4 @@
-### 📱 SegSaúde
+### 📱 SegMed
 
 Aplicativo acadêmico desenvolvido para simulação de cadastro e consulta de planos de saúde.  
 O sistema possui **telas separadas por tipo de usuário**, permitindo interação para:
